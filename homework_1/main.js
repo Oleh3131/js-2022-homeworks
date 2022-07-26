@@ -189,14 +189,14 @@
 // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 
 
-// let name = prompt('What is your name?');
-//
-// let surname = prompt('What is your surname?');
-//
-// let age = prompt('How old are you?');
-//
-// let information = `My name is ${name} ${surname}.I am ${age}.`
-//
-// console.log(information);
-//
-// document.write(`<h2>${information}</h2>`)
+let name = prompt('What is your name?');
+
+let surname = prompt('What is your surname?');
+
+let age = +prompt('How old are you?');
+
+let information = `My name is ${name} ${surname}.I am ${age}.`
+
+console.log(information);
+
+document.write(`<h2>${information}</h2>`)

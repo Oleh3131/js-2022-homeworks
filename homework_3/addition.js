@@ -183,17 +183,10 @@
 // }
 
 
-
 // -----------------АБО ТЕРНАРКОЮ------------------------------------------------------
 
 
 // let someNumber = +prompt("Please enter your number") === 10? alert('Right!') :alert("Incorrectly!") ;
-
-
-
-
-
-
 
 
 // - Задача-гра "чи ми йдемо сьогодні в OKTEN на навчання?".
@@ -223,22 +216,9 @@
 // let temperature=(someTemperature>=10 && someTemperature<=22 )? alert("We go to study"): alert("We study online");
 
 
-
-
-
-
-
-
-
-
-
-
-
 // - За допомогою switch case - реалізувати гру - вікторину, де ми вводимо число від 1 до 5.
 // І взалежності від введеного числа нам дається приз.
 // (Авто, Мото, Телефон, і т.д ) і якщо число не підходить тоді  вивести Повідомлення - що число не вірне.......................................................................................................................................................................
-
-
 
 
 // let someNumber = +prompt("Please enter a number from 1 to 5");
@@ -278,30 +258,31 @@
 // }
 
 
-
-
-
 // 1. Три різних числа вводяться через prompt().
 // За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)..................................................................................................................................................................................
 
 
-let firstNumber = +prompt('Please enter the first number');
-
-let secondNumber = +prompt('Please enter the second number');
-
-let thirdNumber = +prompt('Please enter the third number');
 
 
 
-
-
-
-
-
-
-
-
-
+// let firstNumber = +prompt('Please enter the first number');
+//
+// let secondNumber = +prompt('Please enter the second number');
+//
+// let thirdNumber = +prompt('Please enter the third number');
+//
+//
+// let array = [];
+//
+// array.push(firstNumber, secondNumber, thirdNumber);
+//
+// let sort = array.sort((a, b)=>{
+//
+//     return a - b;
+//
+// });
+//
+// console.log(sort);
 
 
 
@@ -316,8 +297,35 @@ let thirdNumber = +prompt('Please enter the third number');
 //     Если светофор зеленый - вывести "иди".
 //     Если светофор желтый - вывести "подожди".
 //     Если светофор красный - вывести "стой".
-//     Если светофор в аварийном режиме вывести "делай что хочешь"!
+//     Если светофор в аварийном режиме вывести "делай что хочешь"!..................................................................................................................................................................
+
+
+// let trafficLights = prompt("What color is the traffic light now?");
 //
+// switch (trafficLights) {
+//
+//     case 'green':
+//
+//         alert('You can go!');
+//         break;
+//
+//     case 'yellow':
+//
+//         alert('Wait');
+//         break;
+//
+//     case 'red':
+//
+//         alert('Stop');
+//         break;
+//
+//         default:
+//
+//             alert('Cross the road carefully!!!')
+//
+// }
+
+
 //     3
 // Все параметры получаем с клавиатуры!!!!(prompt , confirm)
 // Создать переменную isRoadClear которая характеризирует наличие на дороге машин.
@@ -328,7 +336,57 @@ let thirdNumber = +prompt('Please enter the third number');
 //     Если светофор желтый и машин нет - вывести "все рано жди".
 //     Если светофор красный и машин нет- вывести "стой все рано".
 //     Если светофор красный - и машины есть вывести "стой и жди".
-//     Если светофор в аварийном режиме вывести "делай что хочешь"!
+//     Если светофор в аварийном режиме вывести "делай что хочешь"!......................................................................................................................................................................................................................................
 
 
 
+// let trafficLights = prompt("What color is the traffic light now?");
+//
+// let isRoadClear = confirm("Is road Clear?");
+//
+// if (trafficLights === 'green') {
+//
+//     if (isRoadClear) {
+//
+//         alert('You can go!');
+//
+//
+//     } else {
+//
+//         alert('Wait for the cars to pass!');
+//
+//     }
+//
+// } else if (trafficLights === 'yellow') {
+//
+//     if (isRoadClear) {
+//
+//         alert('Wait!');
+//
+//     } else {
+//
+//         alert('Just wait!');
+//
+//     }
+//
+// } else if (trafficLights === 'red') {
+//
+//     if (isRoadClear) {
+//
+//         alert('Stand and wait for the green color!');
+//
+//     } else {
+//
+//         alert('Stand and wait!');
+//
+//     }
+//
+// } else if (trafficLights === "Emergency mode" && isRoadClear) {
+//
+//     alert('Do what you want!');
+//
+// } else {
+//
+//     alert('Be careful!');
+//
+// }

@@ -1,6 +1,6 @@
 // - Нам дано масив друзів let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"]; Потрібно зробити перевірку якщо
 // кількість елементів у масиві більше або дорівнює 3, то виводиться повідомлення про те, що це великий масив, в якому  3 і більше елементи.
-// Інакше слід вивести на екран повідомлення про те, що це маленький масив, в якому менше 3-х елементів.
+// Інакше слід вивести на екран повідомлення про те, що це маленький масив, в якому менше 3-х елементів...................................................................................................
 
 
 // let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"];
@@ -166,7 +166,8 @@
 // }
 
 
-// - Ми маємо змінну number в яку користувач задає числове значення,  якщо змінна рівна 10 вивести повідомлення ВІРНО, якщо змінна не рівна 10 - тоді НЕВІРНО
+// - Ми маємо змінну number в яку користувач задає числове значення,
+// якщо змінна рівна 10 вивести повідомлення ВІРНО, якщо змінна не рівна 10 - тоді НЕВІРНО..................................................................................................................
 
 
 // let someNumber = +prompt("Please enter your number");
@@ -183,7 +184,7 @@
 // }
 
 
-// -----------------АБО ТЕРНАРКОЮ------------------------------------------------------
+// -----------------АБО ТЕРНАРКОЮ---------------------------------------------------------------
 
 
 // let someNumber = +prompt("Please enter your number") === 10? alert('Right!') :alert("Incorrectly!") ;
@@ -262,7 +263,128 @@
 // За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)..................................................................................................................................................................................
 
 
+// let firstNumber = +prompt('Please enter the first number');
+//
+// let secondNumber = +prompt('Please enter the second number');
+//
+// let thirdNumber = +prompt('Please enter the third number');
+//
+// let mainArray = [];
+//
+// if (thirdNumber > firstNumber && thirdNumber > secondNumber) {
+//
+//     mainArray[2] = thirdNumber;
+//
+//     if (firstNumber < secondNumber && firstNumber < thirdNumber) {
+//
+//         mainArray[0] = firstNumber;
+//
+//         if (secondNumber < thirdNumber && secondNumber > firstNumber) {
+//
+//             mainArray[1] = secondNumber;
+//
+//             console.log(mainArray)
+//
+//         } else {
+//
+//             console.log("not assigned number")
+//
+//         }
+//
+//     } else if (secondNumber < firstNumber && secondNumber < thirdNumber) {
+//
+//         mainArray[0] = secondNumber;
+//
+//         if (firstNumber < thirdNumber && firstNumber > secondNumber) {
+//
+//             mainArray[1] = firstNumber;
+//
+//             console.log(mainArray)
+//
+//         } else {
+//
+//             console.log("not assigned number")
+//
+//         }
+//     }
+//
+// } else if (secondNumber > firstNumber && secondNumber > thirdNumber) {
+//
+//     mainArray[2] = secondNumber;
+//
+//     if (firstNumber < secondNumber && firstNumber < thirdNumber) {
+//
+//         mainArray[0] = firstNumber;
+//
+//         if (thirdNumber < secondNumber && thirdNumber > firstNumber) {
+//
+//             mainArray[1] = thirdNumber;
+//
+//             console.log(mainArray)
+//
+//         } else {
+//
+//             console.log("not assigned number")
+//
+//         }
+//
+//     } else if (thirdNumber < firstNumber && thirdNumber < secondNumber) {
+//
+//         mainArray[0] = thirdNumber;
+//
+//         if (firstNumber < secondNumber && firstNumber > thirdNumber) {
+//
+//             mainArray[1] = firstNumber;
+//
+//             console.log(mainArray)
+//
+//         } else {
+//
+//             console.log("not assigned number")
+//
+//         }
+//     }
+//
+// } else if (firstNumber > secondNumber && firstNumber > thirdNumber) {
+//
+//     mainArray[2] = firstNumber;
+//
+//     if (secondNumber < firstNumber && secondNumber < thirdNumber) {
+//
+//         mainArray[0] = secondNumber;
+//
+//         if (thirdNumber < firstNumber && thirdNumber > secondNumber) {
+//
+//             mainArray[1] = thirdNumber;
+//
+//             console.log(mainArray)
+//
+//         } else {
+//
+//             console.log("not assigned number")
+//
+//         }
+//
+//     } else if (thirdNumber < secondNumber && thirdNumber < firstNumber) {
+//
+//         mainArray[0] = thirdNumber;
+//
+//         if (secondNumber < firstNumber && secondNumber > thirdNumber) {
+//
+//             mainArray[1] = secondNumber;
+//
+//             console.log(mainArray)
+//
+//         } else {
+//
+//             console.log("not assigned number")
+//
+//         }
+//     }
+// }
 
+
+// ------------------АБО ЛЕГШИЙ ВАРІАНТ ЧЕРЕЗ МЕТОД МАСИВІВ--------------------------------------
 
 
 // let firstNumber = +prompt('Please enter the first number');
@@ -283,12 +405,6 @@
 // });
 //
 // console.log(sort);
-
-
-
-
-
-
 
 
 // 2.
@@ -337,7 +453,6 @@
 //     Если светофор красный и машин нет- вывести "стой все рано".
 //     Если светофор красный - и машины есть вывести "стой и жди".
 //     Если светофор в аварийном режиме вывести "делай что хочешь"!......................................................................................................................................................................................................................................
-
 
 
 // let trafficLights = prompt("What color is the traffic light now?");

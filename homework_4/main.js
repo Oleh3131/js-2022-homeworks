@@ -1,4 +1,4 @@
-// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині......................................................................................................
 
 
 // for (let i = 1; i < 11; i += 1) {
@@ -16,7 +16,7 @@
 // }
 
 
-// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+// - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині..................................................................................................................
 
 // for (let i = 1; i < 11; i = i + 1) {
 //
@@ -33,8 +33,7 @@
 // }
 
 
-// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
-
+// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині........................................................................................................................................
 
 
 // document.write(`<div style="display: flex;flex-direction: column;justify-content: center;align-items: center">`);
@@ -59,13 +58,7 @@
 // document.write(`</div>`);
 
 
-
-
-
-// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
-
-
-
+// - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.....................................................................................................................................
 
 
 // document.write(`<div style="display: flex;flex-direction: column;justify-content: center;align-items: center">`);
@@ -90,13 +83,9 @@
 // document.write(`</div>`);
 
 
-
-
-
-
-
 // - Використовуючи данні з масиву, за допомоги document.write та циклу
-// побудувати структуру по шаблону
+// побудувати структуру по шаблону....................................................................................................................................................................................................
+
 // Масив:
 //
 //     let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
@@ -117,7 +106,6 @@
 // -----------------------------------------------
 
 
-
 // let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 //
 // document.write(`<ul style="background: silver;display: flex;justify-content: center;align-items: center;flex-direction: column">`)
@@ -133,14 +121,9 @@
 // document.write(`</ul>`)
 
 
-
-
-
-
-
 //     Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону  Зробити адекватну стилізацію
-// Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
+// Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон...................................................................................................................................................................................
 //
 // let products = [
 //     {
@@ -173,9 +156,28 @@
 // Замість TITLE PRICE IMAGE - підставити відповідні поля з об'єкту
 //
 //
+
+
+// for (const product of products) {
 //
-// --------------------
+//     document.write(`<div class="product-card">`);
+//
+//     document.write(`<h3 class="product-title">${product.title}. Price - ${product.price}</h3>`);
+//
+//     document.write(`<img src="${product.image}" alt="product">`);
+//
+//     document.write(`<div/>`);
+//
+// }
+
+
+//
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 //     є масив
+
+
 // let users = [
 //     {name: 'vasya', age: 31, status: false},
 //     {name: 'petya', age: 30, status: true},
@@ -189,13 +191,96 @@
 //     {name: 'olya', age: 31, status: false},
 //     {name: 'max', age: 31, status: true}
 // ];
+
+
 // за допомоги циклу вивести:
-//     - користувачів зі статусом true
+// - користувачів зі статусом true
 // - користувачів зі статусом false
 // - користувачів які старші за 30 років
 
 
+// let trueArray = [];
+//
+// let falseArray = [];
+//
+// for (let i = 0; i < users.length; i++) {
+//
+//     let user = users[i];
+//
+//     if (user.status) {
+//
+//         trueArray[trueArray.length] = user;
+//
+//     } else {
+//
+//         falseArray[falseArray.length] = user;
+//
+//     }
+// }
+//
+// console.log(trueArray);
+// console.log(falseArray);
+//
+//
+// let oldUsersArray = [];
+//
+// let youngUsersArray = [];
+//
+// for (const user of users) {
+//
+//     if (user.age>30) {
+//
+//         oldUsersArray[oldUsersArray.length] = user;
+//
+//     }else {
+//
+//         youngUsersArray[youngUsersArray.length] = user;
+//
+//     }
+// }
+//
+// console.log(oldUsersArray);
+// console.log(youngUsersArray);
 
 
 
 
+// ------------------------------ВИРІШЕННЯ МЕТОДОМ МАСИВІВ------------------------------------------------
+
+
+// let firstReduce = users.reduce((acumulator, user) => {
+//
+//     if (user.status) {
+//
+//         acumulator[0].push(user);
+//
+//     } else {
+//
+//         acumulator[1].push(user);
+//
+//     }
+//
+//     return acumulator;
+//
+// }, [[], []]);
+//
+// console.log(firstReduce);
+//
+//
+// let secondReduce = users.reduce((acumulator, user) => {
+//
+//     if (user.age > 30) {
+//
+//         acumulator[0].push(user);
+//
+//     } else {
+//
+//         acumulator[1].push(user);
+//
+//     }
+//
+//     return acumulator;
+//
+// }, [[], []]);
+//
+// console.log(secondReduce);

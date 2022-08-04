@@ -513,56 +513,60 @@
 
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри)....................................................................................................
 
-// let arrayOfBooks = [
-//
-//     {
-//         name: "The Return of the King",
-//         pages: 350,
-//         author: ["John R.R. Tolkien"],
-//         genre: ["Fantasy", "Epic fantasy", "Adventure Fiction"]
-//     },
-//     {
-//         name: "Mascot",
-//         pages: 255,
-//         author: ["Stephen King", "Peter Straub"],
-//         genre: ["Romance", "Horror Literature", "Science Fiction", "Fantasy", "Epic Fantasy"]
-//     },
-//     {
-//         name: "Martin Eden",
-//         pages: 448,
-//         author: ["Jack London"],
-//         genre: ["Novel", "Fiction", "Fiction novel"]
-//     },
-//     {
-//         name: "Angelica",
-//         pages: 502,
-//         author: ["Anne Golon", "Serge Golon"],
-//         genre: ["Novel"]
-//     }
-// ];
+let arrayOfBooks = [
 
+    {
+        name: "The Return of the King",
+        pages: 350,
+        author: ["John R.R. Tolkien"],
+        genre: ["Fantasy", "Epic fantasy", "Adventure Fiction"]
+    },
+    {
+        name: "Mascot",
+        pages: 255,
+        author: ["Stephen King", "Peter Straub"],
+        genre: ["Romance", "Horror Literature", "Science Fiction", "Fantasy", "Epic Fantasy"]
+    },
+    {
+        name: "Martin Eden",
+        pages: 448,
+        author: ["Jack London"],
+        genre: ["Novel", "Fiction", "Fiction novel"]
+    },
+    {
+        name: "Angelica",
+        pages: 502,
+        author: ["Anne Golon", "Serge Golon"],
+        genre: ["Novel"]
+    }
+];
 
+let firstBook = arrayOfBooks[0];
 
 // -знайти найбільшу книжку.................................................................................
 
+for (let i = 0; i < arrayOfBooks.length; i++) {
 
-    // if ((arrayOfBooks[0].pages > arrayOfBooks[1].pages && arrayOfBooks[0].pages > arrayOfBooks[2].pages) && arrayOfBooks[0].pages > arrayOfBooks[3].pages) {
-    //
-    //     console.log(arrayOfBooks[0]);
-    //
-    // } else if ((arrayOfBooks[1].pages > arrayOfBooks[0].pages && arrayOfBooks[1].pages > arrayOfBooks[2].pages) && arrayOfBooks[1].pages > arrayOfBooks[3].pages) {
-    //
-    //     console.log(arrayOfBooks[1]);
-    //
-    // } else if ((arrayOfBooks[2].pages > arrayOfBooks[0].pages && arrayOfBooks[2].pages > arrayOfBooks[1].pages) && arrayOfBooks[2].pages > arrayOfBooks[3].pages) {
-    //
-    //     console.log(arrayOfBooks[2]);
-    //
-    // } else if ((arrayOfBooks[3].pages > arrayOfBooks[0].pages && arrayOfBooks[3].pages > arrayOfBooks[1].pages) && arrayOfBooks[3].pages > arrayOfBooks[2].pages) {
-    //
-    //     console.log(arrayOfBooks[3]);
-    //
-    // }
+    if ((arrayOfBooks[0].pages > arrayOfBooks[1].pages && arrayOfBooks[0].pages > arrayOfBooks[2].pages) && arrayOfBooks[0].pages > arrayOfBooks[3].pages) {
+
+        console.log(arrayOfBooks[0]);
+
+    } else if ((arrayOfBooks[1].pages > arrayOfBooks[0].pages && arrayOfBooks[1].pages > arrayOfBooks[2].pages) && arrayOfBooks[1].pages > arrayOfBooks[3].pages) {
+
+        console.log(arrayOfBooks[1]);
+
+    } else if ((arrayOfBooks[2].pages > arrayOfBooks[0].pages && arrayOfBooks[2].pages > arrayOfBooks[1].pages) && arrayOfBooks[2].pages > arrayOfBooks[3].pages) {
+
+        console.log(arrayOfBooks[2]);
+
+    } else if ((arrayOfBooks[3].pages > arrayOfBooks[0].pages && arrayOfBooks[3].pages > arrayOfBooks[1].pages) && arrayOfBooks[3].pages > arrayOfBooks[2].pages) {
+
+        console.log(arrayOfBooks[3]);
+
+    }
+
+}
+
 
 
 

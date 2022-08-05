@@ -44,7 +44,6 @@
 // console.log(valueAreaOfACircle);
 
 
-
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
 // function areaOfTheCylinder(r,h) {
@@ -60,7 +59,6 @@
 // let valueAreaOfTheCylinder = areaOfTheCylinder(8,20);
 //
 // console.log(valueAreaOfTheCylinder);
-
 
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
@@ -90,7 +88,6 @@
 // }
 //
 // friendsArray(friends);
-
 
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
@@ -138,40 +135,65 @@
 // creator("Welcome to my resolves!!",4);
 
 
-
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 
-let arrayOfPrimitiveValues = ["html",123,true,NaN,"nodejs",666,false,54,"python",444,undefined,"css",false]
-
-function createList(someArray) {
-
-    document.write(`<ol>`)
-
-    for (let i = 0; i < someArray.length; i++) {
-
-        let element = someArray[i];
-
-        document.write(`<li>${element}</li>`)
-
-    }
-    document.write(`</ol>`)
-}
-
-createList(arrayOfPrimitiveValues);
-
+// let arrayOfPrimitiveValues = ["html",123,true,NaN,"nodejs",666,false,54,"python",444,undefined,"css",false]
+//
+// function createList(someArray) {
+//
+//     document.write(`<ol>`)
+//
+//     for (let i = 0; i < someArray.length; i++) {
+//
+//         let element = someArray[i];
+//
+//         document.write(`<li>${element}</li>`)
+//
+//     }
+//     document.write(`</ol>`)
+// }
+//
+// createList(arrayOfPrimitiveValues);
 
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ.
 // Для кожного об'єкту окремий блок.
 
-
-
-
-
-
-
-
+// let friends = [
+//     {id: 1, name: 'John', age: 22, status: false},
+//     {id: 2, name: 'Peter', age: 23, status: true},
+//     {id: 3, name: 'Mark', age: 24, status: false},
+//     {id: 4, name: 'Maria', age: 22, status: true},
+//     {id: 5, name: 'Monica', age: 21, status: true},
+//     {id: 6, name: 'Martha', age: 19, status: false},
+// ]
+//
+// function outputOfObjects(someArray) {
+//
+//     document.write(`<div>`)
+//
+//     for (let friend of someArray) {
+//
+//         let object = JSON.stringify(friend);
+//
+//         document.write(`<div>${object}</div><br>`);
+//
+//     }
+//
+//     document.write(`</div>`);
+//
+//
+// }
+//
+// outputOfObjects(friends);
 
 
 // - створити функцію яка повертає найменьше число з масиву
+
+
+
+
+
+
+
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13

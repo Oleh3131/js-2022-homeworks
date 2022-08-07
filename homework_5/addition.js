@@ -234,7 +234,6 @@
 // console.log(keysArray);
 
 
-
 // 10) Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
@@ -333,25 +332,155 @@
 // console.log(resultArray1);
 
 
-
 // ============================================================================================
 //
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
 
-
-
-
+// function setNumbers(...a) {
+//
+//     let firstNumber = a[0];
+//
+//     let secondNumber=a[0];
+//
+//
+//     for (let array of a) {
+//
+//         if (array < firstNumber) {
+//
+//             firstNumber = array;
+//
+//         }
+//     }
+//
+//     for (let secondArray of a) {
+//
+//         if (secondArray > secondNumber) {
+//
+//             secondNumber = secondArray;
+//
+//         }
+//     }
+//
+//     console.log(secondNumber);
+//
+//     return firstNumber;
+// }
+//
+// let numbers = setNumbers(8, 6, 4, 13, -5,24);
+//
+// console.log(numbers);
 
 
 // - Взяти задачі з завдання 10 та 9 та обєднати їх в одну динамічну функцію.
 //     Що б я міг сам вибрати повернути мені масив ключів чи масив значень.
-// - Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+
+// let arrayOfBooks = [
+//     {
+//         name: "The Return of the King",
+//         pages: 350,
+//         author: ["John R.R. Tolkien"],
+//         genre: ["Fantasy", "Epic fantasy", "Adventure Fiction"]
+//     },
+//     {
+//         name: "Mascot",
+//         pages: 255,
+//         author: ["Stephen King", "Peter Straub"],
+//         genre: ["Romance", "Horror Literature", "Science Fiction", "Fantasy", "Epic Fantasy"]
+//     },
+//     {
+//         name: "Martin Eden",
+//         pages: 448,
+//         author: ["Jack London"],
+//         genre: ["Novel", "Fiction", "Fiction novel"]
+//     },
+//     {
+//         name: "Angelica",
+//         pages: 502,
+//         author: ["Anne Golon", "Serge Golon"],
+//         genre: ["Novel"]
+//     }
+// ];
+//
+// let nextArrayOfKeys = [];
+//
+// let nextArrayOfKeysValues = [];
+//
+// function createKeysArray(someArray) {
+//
+//     for (let array of someArray) {
+//
+//         for (let key in array){
+//
+//             if (nextArrayOfKeysValues.includes(array[key])) {
+//
+//                 nextArrayOfKeysValues[nextArrayOfKeysValues.length] !== array[key];
+//
+//             }else{
+//
+//                 nextArrayOfKeysValues[nextArrayOfKeysValues.length] = array[key];
+//
+//             }
+//         }
+//     }
+//
+//     for (let array of someArray) {
+//
+//         for (let key in array){
+//
+//             if (nextArrayOfKeys.includes(key)) {
+//
+//                 nextArrayOfKeys[nextArrayOfKeys.length] !== key;
+//
+//             }else {
+//
+//                 nextArrayOfKeys[nextArrayOfKeys.length] = key;
+//
+//             }
+//         }
+//     }
+//     return nextArrayOfKeysValues
+// }
+//
+// let keysArray = createKeysArray(arrayOfBooks);
+//
+// console.log(keysArray);
+
+
+
+// - Функція приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-//
+
+
+
+let numberArray = [2, 4, 8, 12];
+
+function changeNumber(someArray,i) {
+
+    let someNumber = someArray[i];
+
+    someArray[i]= someArray[i+1]
+
+    someArray[i+1] = someNumber;
+
+    console.log(numberArray);
+
+}
+
+changeNumber(numberArray,0);
+
+
+
+
+
+
+
+
+
+
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // EXAMPLE:

@@ -174,15 +174,10 @@
 //
 //     for (let friend of someArray) {
 //
-//         let object = JSON.stringify(friend);
-//
-//         document.write(`<div>${object}</div><br>`);
+//         document.write(`<div>${friend.id} - ${friend.name} - ${friend.age} - ${friend.status}</div><br>`);
 //
 //     }
-//
 //     document.write(`</div>`);
-//
-//
 // }
 //
 // outputOfObjects(friends);

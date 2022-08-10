@@ -489,16 +489,16 @@ let deckOfCards = [
 //
 // let findAllClubsCards = deckOfCards.find(object => {
 //
-//     if (object.cardSuit === "clubs" && object.value >="9" ) {
+//     if (object.cardSuit === "clubs" && object.value>=+"9") {
 //
-//         arrayOfClubsCards.push(object);
+//          arrayOfClubsCards.push(object);
 //     }
 // });
 //
 // console.log(arrayOfClubsCards);
 
 
-// Додатково по reduce..................................................................................
+// Додатково по reduce..................................................................................................................................................................................
 // Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
 // {
 //     spades:[],

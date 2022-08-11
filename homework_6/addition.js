@@ -182,12 +182,9 @@
 // Все робити через функції масивів (foreach, map ...тд)...............................................................................................................................................................................
 // Дан масив :
 //     let users = [ {name: 'vasya', age: 31, status: false}, {name: 'petya', age: 30, status: true}, {name: 'kolya', age: 29, status: true}, {name: 'olya', age: 28, status: false}, {name: 'max', age: 30, status: true}, {name: 'anya', age: 31, status: false}, {name: 'oleg', age: 28, status: false}, {name: 'andrey', age: 29, status: true}, {name: 'masha', age: 30, status: true}, {name: 'olya', age: 31, status: false}, {name: 'max', age: 31, status: true} ];
-// - відсортувати його за  віком (зростання , а потім окремо спадання)
-// - відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
-// - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор
-// (По якому принципу його створювати - ваше рішення),
-// та зберегти це в новий масив (первинний масив залишиться без змін)
-// - відсортувати його за індентифікатором
+
+
+
 
 
 // let users = [
@@ -248,6 +245,8 @@
 //     }
 // ];
 
+// - відсортувати його за  віком (зростання , а потім окремо спадання)
+
 
 // let sortGrowth = users.sort((a, b) => {
 //
@@ -267,6 +266,34 @@
 // console.log(sortDecrease);
 
 
+// - відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)..........
+
+
+// let sortByNameLengthGrowth = users.sort((a, b) => {
+//
+//     return a.name.length - b.name.length;
+//
+// });
+//
+// console.log(sortByNameLengthGrowth);
+
+
+
+// let sortByNameLengthDecrease = users.sort((a, b) => {
+//
+//     return b.name.length - a.name.length;
+//
+// });
+//
+// console.log(sortByNameLengthDecrease);
+
+
+
+// - пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний
+// індентифікатор (По якому принципу його створювати - ваше рішення),
+// та зберегти це в новий масив (первинний масив залишиться без змін)...............................
+
+
 // let map = users.map((user, index) => {
 //
 //     return {...user,id:index+1};
@@ -274,7 +301,12 @@
 // });
 //
 // console.log(map);
-//
+
+
+
+// - відсортувати його за індентифікатором.........................................................
+
+
 // let sort = map.sort((a, b) => {
 //
 //     return b.id - a.id;
@@ -282,6 +314,24 @@
 // });
 //
 // console.log(sort);
+
+
+// - Всі хто одружений мають попасти у новий масив та отрмати квартиру (reduce)
+
+
+// let reduce = users.reduce((previousValue, currentValue)=>{
+//
+//     if (currentValue.status) {
+//
+//         previousValue.push(currentValue);
+//
+//     }
+//
+//     return previousValue
+//
+// },[]);
+//
+// console.log(reduce);
 
 
 // -- наисать функцию калькулятора с 2мя числами и колбеком...............................................
@@ -655,87 +705,87 @@
 // -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
 // -- отфильтровать (оставить) тех у кого номер дома четный
 
-// let usersWithAddress = [
-//     {
-//         id: 1,
-//         name: 'vasya',
-//         age: 31,
-//         status: false,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 16}
-//     },
-//     {
-//         id: 2,
-//         name: 'petya',
-//         age: 30,
-//         status: true,
-//         address: {city: 'Lviv', street: 'Vasilenko', number: 1}
-//     },
-//     {
-//         id: 3,
-//         name: 'kolya',
-//         age: 29,
-//         status: true,
-//         address: {city: 'Lviv', street: 'Romanova', number: 121}
-//     },
-//     {
-//         id: 4,
-//         name: 'olya',
-//         age: 28,
-//         status: false,
-//         address: {city: 'Lviv', street: 'Soborna', number: 90}
-//     },
-//     {
-//         id: 5,
-//         name: 'max',
-//         age: 30,
-//         status: true,
-//         address: {city: 'Lviv', street: 'Nabezna', number: 115}
-//     },
-//     {
-//         id: 6,
-//         name: 'anya',
-//         age: 31,
-//         status: false,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 2}
-//     },
-//     {
-//         id: 7,
-//         name: 'oleg',
-//         age: 28,
-//         status: false,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 22}
-//     },
-//     {
-//         id: 8,
-//         name: 'andrey',
-//         age: 29,
-//         status: true,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 43}
-//     },
-//     {
-//         id: 9,
-//         name: 'masha',
-//         age: 30,
-//         status: true,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 12}
-//     },
-//     {
-//         id: 10,
-//         name: 'olya',
-//         age: 31,
-//         status: false,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 16}
-//     },
-//     {
-//         id: 11,
-//         name: 'max',
-//         age: 31,
-//         status: true,
-//         address: {city: 'Lviv', street: 'Shevchenko', number: 121}
-//     }
-// ];
+let usersWithAddress = [
+    {
+        id: 1,
+        name: 'vasya',
+        age: 31,
+        status: false,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 16}
+    },
+    {
+        id: 2,
+        name: 'petya',
+        age: 30,
+        status: true,
+        address: {city: 'Lviv', street: 'Vasilenko', number: 1}
+    },
+    {
+        id: 3,
+        name: 'kolya',
+        age: 29,
+        status: true,
+        address: {city: 'Lviv', street: 'Romanova', number: 121}
+    },
+    {
+        id: 4,
+        name: 'olya',
+        age: 28,
+        status: false,
+        address: {city: 'Lviv', street: 'Soborna', number: 90}
+    },
+    {
+        id: 5,
+        name: 'max',
+        age: 30,
+        status: true,
+        address: {city: 'Lviv', street: 'Nabezna', number: 115}
+    },
+    {
+        id: 6,
+        name: 'anya',
+        age: 31,
+        status: false,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 2}
+    },
+    {
+        id: 7,
+        name: 'oleg',
+        age: 28,
+        status: false,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 22}
+    },
+    {
+        id: 8,
+        name: 'andrey',
+        age: 29,
+        status: true,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 43}
+    },
+    {
+        id: 9,
+        name: 'masha',
+        age: 30,
+        status: true,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 12}
+    },
+    {
+        id: 10,
+        name: 'olya',
+        age: 31,
+        status: false,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 16}
+    },
+    {
+        id: 11,
+        name: 'max',
+        age: 31,
+        status: true,
+        address: {city: 'Lviv', street: 'Shevchenko', number: 121}
+    }
+];
 
-// -- отсортировать его по id пользователей
+// -- отсортировать его по id пользователей.........................................
 
 // let sortGrowthId = usersWithAddress.sort((a, b) => {
 //
@@ -746,7 +796,7 @@
 // console.log(sortGrowthId);
 
 
-// -- отсортировать его по id пользователей в обратном опрядке
+// -- отсортировать его по id пользователей в обратном опрядке.......................
 
 // let sortDecreaseId = usersWithAddress.sort((a, b) => {
 //
@@ -757,7 +807,7 @@
 // console.log(sortDecreaseId);
 
 
-// -- отсортировать его по возрасту пользователей
+// -- отсортировать его по возрасту пользователей................................
 
 // let sortGrowthAge = usersWithAddress.sort((a, b) => {
 //
@@ -768,7 +818,7 @@
 // console.log(sortGrowthAge);
 
 
-// -- отсортировать его по возрасту пользователей в обратном порядке
+// -- отсортировать его по возрасту пользователей в обратном порядке....................
 
 // let sortDecreaseAge = usersWithAddress.sort((a, b) => {
 //
@@ -780,7 +830,7 @@
 
 
 
-// -- отсортировать его по имени пользователей
+// -- отсортировать его по имени пользователей.....................................
 
 
 // let sortByName = usersWithAddress.sort((a, b) => {
@@ -804,7 +854,7 @@
 
 
 
-// -- отсортировать его по имени пользователей в обратном порядке
+// -- отсортировать его по имени пользователей в обратном порядке....................
 
 
 
@@ -828,7 +878,7 @@
 
 
 
-// -- отсортировать его по названию улицы  в алфавитном порядке
+// -- отсортировать его по названию улицы  в алфавитном порядке........................
 
 
 // let sortByAddressName = usersWithAddress.sort((a, b) => {
@@ -851,7 +901,7 @@
 // console.log(sortByAddressName);
 
 
-// -- отсортировать его по номеру дома по возрастанию
+// -- отсортировать его по номеру дома по возрастанию.......................
 
 
 // let sortByHomeNumber = usersWithAddress.sort((a, b) => {
@@ -875,7 +925,7 @@
 
 
 
-// -- отфильтровать (оставить) тех кто младше 30
+// -- отфильтровать (оставить) тех кто младше 30.......................
 
 
 // let filterAge = usersWithAddress.filter(value => {
@@ -890,7 +940,7 @@
 // console.log(filterAge);
 
 
-// -- отфильтровать (оставить) тех у кого отрицательный статус
+// -- отфильтровать (оставить) тех у кого отрицательный статус....................
 
 
 // let filterStatus = usersWithAddress.filter(value => {
@@ -904,7 +954,7 @@
 // console.log(filterStatus);
 
 
-// -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет
+// -- отфильтровать (оставить) тех у кого отрицательный статус и младше 30 лет...........
 
 // let filterStatus = usersWithAddress.filter(value => {
 //
@@ -917,7 +967,7 @@
 // console.log(filterStatus);
 
 
-// -- отфильтровать (оставить) тех у кого номер дома четный
+// -- отфильтровать (оставить) тех у кого номер дома четный..............
 
 
 // let filterStatus = usersWithAddress.filter(value => {
@@ -929,3 +979,34 @@
 //     }
 // });
 // console.log(filterStatus);
+
+
+// -- Порахувати загальний вік всіх людей.................................................
+
+
+
+// let number = usersWithAddress.reduce((previousValue, currentValue) => {
+//
+//     return previousValue + currentValue.age;
+//
+// }, 0);
+//
+// console.log(number);
+
+
+
+// -- Ті, хто одружений і старий за 30 має отримати обєкти child і попасти в новий масив (reduce)...............
+
+// let number = usersWithAddress.reduce((previousValue, currentValue) => {
+//
+//     if (currentValue.status && currentValue.age > 30) {
+//
+//         previousValue.push({...currentValue,child:{name:"Kolya"}})
+//
+//     }
+//
+//     return previousValue;
+//
+// }, []);
+//
+// console.log(number);

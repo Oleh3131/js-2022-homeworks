@@ -554,77 +554,83 @@
 // some.email@gmail.com
 
 
-let firstEmail = "omeemail@gmail.com";
-let secondEmail = "someeMAIL@gmail.com";
-let thirdEmail = "someeMAIL@i.ua";
-let fourthEmail = "some.email@gmail.com";
+// let firstEmail = "omeemail@gmail.com";
+// let secondEmail = "someeMAIL@gmail.com";
+// let thirdEmail = "someeMAIL@i.ua";
+// let fourthEmail = "some.email@gmail.com";
 
 
-function validatorProtection(email) {
-
-    let validValue;
-
-    let invalidValue;
-
-    if (email.includes("@")) {
-
-        let indexOf = email.indexOf("@");
-
-        if (indexOf) {
-
-            for (let i = indexOf; i >= 0; i--) {
-
-                if ((typeof email[i] === 'string' || typeof email[i] === "number" || typeof email[i] === "symbol") && (email[indexOf - 1] !== "." && email[indexOf - 2] !== ".")) {
-
-                    email[i].toUpperCase() === email[i].toLowerCase();
-
-                    for (let i = indexOf; i < email.length; i++) {
-
-                        if ((typeof email[i] === 'string' || typeof email[i] === "number" || typeof email[i] === "symbol") && (email[indexOf + 1] !== "." && email[indexOf + 2] !== ".")) {
-
-                            email[i].toUpperCase() === email[i].toLowerCase();
-
-                            validValue = "Your email is valid!!!";
-
-                        } else {
-
-                            invalidValue="You have invalid e-mail address data!!!"
-
-                        }
-                    }
-
-                } else {
-
-                    invalidValue = "You have invalid e-mail address data!!!";
-
-                }
-            }
-        }
-
-    } else {
-
-        invalidValue="You have invalid e-mail address data!!!"
-    }
-    return validValue || invalidValue;
-}
-
-
-let validatorResult = validatorProtection(thirdEmail);
-
-console.log(validatorResult);
-
-
-
+// function validatorProtection(email) {
+//
+//     let validValue;
+//
+//     let invalidValue;
+//
+//     if (email.includes("@")) {
+//
+//         let indexOf = email.indexOf("@");
+//
+//         if (indexOf) {
+//
+//             for (let i = indexOf; i >= 0; i--) {
+//
+//                 if ((typeof email[i] === 'string' || typeof email[i] === "number" || typeof email[i] === "symbol") && (email[indexOf - 1] !== "." && email[indexOf - 2] !== ".")) {
+//
+//                     email[i].toUpperCase() === email[i].toLowerCase();
+//
+//                     for (let i = indexOf; i < email.length; i++) {
+//
+//                         if ((typeof email[i] === 'string' || typeof email[i] === "number" || typeof email[i] === "symbol") && (email[indexOf + 1] !== "." && email[indexOf + 2] !== ".")) {
+//
+//                             email[i].toUpperCase() === email[i].toLowerCase();
+//
+//                             validValue = "Your email is valid!!!";
+//
+//                         } else {
+//
+//                             invalidValue="You have invalid e-mail address data!!!"
+//
+//                         }
+//                     }
+//
+//                 } else {
+//
+//                     invalidValue = "You have invalid e-mail address data!!!";
+//
+//                 }
+//             }
+//         }
+//
+//     } else {
+//
+//         invalidValue="You have invalid e-mail address data!!!"
+//     }
+//     return validValue || invalidValue;
+// }
+//
+//
+// let validatorResult = validatorProtection(thirdEmail);
+//
+// console.log(validatorResult);
 
 
 // --------------------АБО РЕГУЛЯРКОЮ------------------------------------------------------------------
 
 
+// let firstEmail = "omeemail@gmail.com";
+// let secondEmail = "someeMAIL@gmail.com";
+// let thirdEmail = "someeMAIL@i.ua";
+// let fourthEmail = "some.email@gmail.com";
+//
+//
+//
 // function validatorProtection(email) {
 //
-//     let validator = /^[a-zA-Z-09.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z-09-]+(?: \.[a-zA-Z09-]+)*$/;
+//     let validator =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?: \.[a-zA-Z0-9-]+)*$/;
 //
-//     if (email.match(validator)) {
+//     let check = email.match(validator);
+//
+//     if (check) {
 //
 //         console.log("Valid email address!");
 //
@@ -635,15 +641,13 @@ console.log(validatorResult);
 //     }
 // }
 //
-// validatorProtection(firstEmail);
+// validatorProtection(thirdEmail);
 
 
-// Примітка
-// Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні".
-// Своїм мозком подумайте над протоколом, з регулярками будете потім бавитись.
-
-
-// - є масивlet coursesArray = [
+// - є масив................................................................................................................................................................................................................................................
+//
+//
+// let coursesArray = [
 //     {
 //         title: 'JavaScript Complex',
 //         monthDuration: 5,
@@ -712,23 +716,213 @@ console.log(validatorResult);
 //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
 //     }
 // ];
-//
-//
+
+
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
+
 //
-// - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
+// let sortModules = coursesArray.sort((a, b) => {
+//
+//     return b.modules.length - a.modules.length;
+//
+// });
+// console.log(sortModules);
+
+
+// - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str........................................................................................................................................
+
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
 // document.writeln(count(str, symb)) // 5
+
+// let symb = "о", str = "Астрономия это наука о небесных объектах";
+
+
+
+// let someString = "Астрономия это наука о небесных объектах";
 //
-// - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
+// function count(str, stringSearch) {
+//
+//     let countNumber = 0;
+//
+//     let allAnotherStringNumbers = 0;
+//
+//     for (let i = 0; i < str.length; i++) {
+//
+//         let string = str[i];
+//
+//         if (string === stringSearch) {
+//
+//             countNumber++;
+//
+//         } else if (string !== stringSearch) {
+//
+//             allAnotherStringNumbers++;
+//
+//         }
+//     }
+//     return countNumber;
+// }
+//
+// let number = count(someString, 'б');
+//
+// console.log(number);
+
+
+
+// - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.................................................................................................................................
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
+
+
+// let string = "Сила тяжести приложена к центру масс тела";
+//
+// function cutString(someString, n) {
+//
+//     let result = '';
+//
+//     let stringToArray = someString.split(' ');
+//
+//     for (let i = 0; i < stringToArray.length; i++) {
+//
+//         let cutSomeItems = stringToArray.slice(0, n);
+//
+//         result = cutSomeItems.join(' ');
+//
+//     }
+//     return result;
+//
+// }
+//
+// let resultOfCutString = cutString(string,2);
+//
+// console.log(resultOfCutString);
+
+
+
+
+// -стоврити масив книжок (назва, кількість сторінок, автори , жанри).............................................................................................................................................
+
+
+// let arrayOfBooks = [
+//
+//     {
+//         name: "The Return of the King",
+//         pages: 350,
+//         author: ["John R.R. Tolkien"],
+//         genre: ["Fantasy", "Epic fantasy", "Adventure Fiction"]
+//     },
+//     {
+//         name: "Mascot",
+//         pages: 255,
+//         author: ["Stephen King", "Peter Straub"],
+//         genre: ["Romance", "Horror Literature", "Science Fiction", "Fantasy", "Epic Fantasy"]
+//     },
+//     {
+//         name: "Martin Eden",
+//         pages: 448,
+//         author: ["Jack London"],
+//         genre: ["Novel", "Fiction", "Fiction novel"]
+//     },
+//     {
+//         name: "Angelica",
+//         pages: 502,
+//         author: ["Anne Golon", "Serge Golon"],
+//         genre: ["Novel"]
+//     }
+// ];
+
+
+// -знайти наібльшу книжку..........................................................
+
+
+// let firstBook = arrayOfBooks[0];
 //
 //
-// -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
-// -знайти наібльшу книжку.
-// - знайти книжку/ки з найбільшою кількістю жанрів
-// - знайти книжку/ки з найдовшою назвою
-// - знайти книжку/ки які писали 2 автори
-// - знайти книжку/ки які писав 1 автор
-// - вісортувати книжки по кількості сторінок по зростанню
+// for (let book of arrayOfBooks) {
+//
+//     if (book.pages > firstBook.pages) {
+//
+//         firstBook = book;
+//
+//     }
+//
+// }
+// console.log(firstBook);
+
+
+// - знайти книжку/ки з найбільшою кількістю жанрів.........................................
+
+
+// let firstBook = arrayOfBooks[0];
+//
+//
+// for (let book of arrayOfBooks) {
+//
+//     if (book.genre.length > firstBook.genre.length) {
+//
+//         firstBook = book;
+//
+//     }
+//
+// }
+// console.log(firstBook);
+
+
+
+// - знайти книжку/ки з найдовшою назвою.....................................................
+
+
+// let firstBook = arrayOfBooks[0];
+//
+//
+// for (let book of arrayOfBooks) {
+//
+//     if (book.name.length > firstBook.name.length) {
+//
+//         firstBook = book;
+//
+//     }
+//
+// }
+// console.log(firstBook);
+
+
+
+// - знайти книжку/ки які писали 2 автори.....................................................
+
+
+// for (let book of arrayOfBooks) {
+//
+//     if (book.author.length===2) {
+//
+//         console.log(book);
+//
+//     }
+// }
+
+
+// - знайти книжку/ки які писав 1 автор........................................................
+
+
+// for (let book of arrayOfBooks) {
+//
+//     if (book.author.length===1) {
+//
+//         console.log(book);
+//
+//     }
+// }
+
+
+
+// - вісортувати книжки по кількості сторінок по зростанню......................................
+
+
+
+// let sortBook = arrayOfBooks.sort((a, b) => {
+//
+//     return a.pages - b.pages;
+//
+// });
+//
+// console.log(sortBook);

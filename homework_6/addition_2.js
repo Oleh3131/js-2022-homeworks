@@ -342,22 +342,22 @@
 // doclet str = "HTML JavaScript PHP";ument.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
 
 
-let str = "HTML JavaScript PHP";
-
-function insert_dash(str) {
-
-    let newString;
-
-    let split = str.split(' ');
-
-    newString = split.join('-').toUpperCase();
-
-    return newString;
-}
-
-let insertDash = insert_dash(str);
-
-console.log(insertDash);
+// let str = "HTML JavaScript PHP";
+//
+// function insert_dash(str) {
+//
+//     let newString;
+//
+//     let split = str.split(' ');
+//
+//     newString = split.join('-').toUpperCase();
+//
+//     return newString;
+// }
+//
+// let insertDash = insert_dash(str);
+//
+// console.log(insertDash);
 
 
 // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній....................................................................................

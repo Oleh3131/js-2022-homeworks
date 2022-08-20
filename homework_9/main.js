@@ -1,4 +1,9 @@
-// - є масив
+
+
+// - є масив..........................................................................................................................................
+
+
+
 // let simpsons = [
 //     {
 //         name: 'Bart',
@@ -36,89 +41,177 @@
 //         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
 //     },
 // ];
+
 // Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 //
-//     Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
+// Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
+
+
+// for (let simpsonMember of simpsons) {
 //
+//     const htmlDivElement = document.createElement("div");
 //
+//     htmlDivElement.classList.add("member");
 //
+//     htmlDivElement.innerHTML = `
+//     <h2>${simpsonMember.name} ${simpsonMember.surname}</h2>
+//     <h4>age:${simpsonMember.age}</h4>
+//     <p>${simpsonMember.info}</p>`
 //
-// Цикл в циклі
+//     const htmlImageElement = document.createElement("img");
+//
+//     htmlImageElement.src = simpsonMember.photo;
+//
+//     htmlDivElement.appendChild(htmlImageElement);
+//
+//     document.body.appendChild(htmlDivElement);
+//
+// }
+
+
+// Цикл в циклі...........................................................................................................................................................................
 // - Є масив
-// let coursesArray = [
-//     {
-//         title: 'JavaScript Complex',
-//         monthDuration: 5,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-//     },
-//     {
-//         title: 'Java Complex',
-//         monthDuration: 6,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'git',
-//             'java core',
-//             'java advanced']
-//     },
-//     {
-//         title: 'Python Complex',
-//         monthDuration: 6,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'python core',
-//             'python advanced']
-//     },
-//     {
-//         title: 'QA Complex',
-//         monthDuration: 4,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-//     },
-//     {
-//         title: 'FullStack',
-//         monthDuration: 7,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'react',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'git',
-//             'node.js',
-//             'python',
-//             'java']
-//     },
-//     {
-//         title: 'Frontend',
-//         monthDuration: 4,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-//     }
-// ];
-//
+
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
+
+
 // Створити для кожного елементу масиву свій блок, блок розділити блоками,
 // в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png
-// ------------------
+
+
+for (let courses of coursesArray) {
+
+    const htmlDivElement = document.createElement('div');
+    htmlDivElement.classList.add('courseObject');
+
+
+
+    const htmlHeadingElement = document.createElement('h2');
+    htmlHeadingElement.innerHTML=`${courses.title}`
+
+    const htmlDivElementTwo = document.createElement('div');
+    htmlDivElementTwo.classList.add('blockOfTwoElements');
+
+    const htmlHeadingElementTwo = document.createElement('h4');
+    htmlHeadingElementTwo.innerHTML=`${courses.monthDuration}`
+
+
+    const htmlHeadingElementThree = document.createElement('h4');
+    htmlHeadingElementThree.innerHTML=`${courses.hourDuration}`
+
+
+    const htmlUlListElement = document.createElement('ul');
+
+    for (let module of courses.modules) {
+
+        const htmlliElement = document.createElement('li');
+        htmlliElement.innerHTML = `${module}`;
+
+        htmlUlListElement.appendChild(htmlliElement);
+    }
+
+
+    htmlDivElementTwo.append(htmlHeadingElementTwo, htmlHeadingElementThree);
+    htmlDivElement.append(htmlHeadingElement, htmlDivElementTwo, htmlUlListElement);
+    document.body.appendChild(htmlDivElement);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //
 //
 //     - створити блок,

@@ -1,3 +1,6 @@
+
+// 1) Перше завдання із замиканням,котре описується за посиланням "https://github.com/GrayHead/js_demos/blob/master/js/archive/additioanl_tasks/additional7/%D1%81losures.pdf"
+
 function userCard(someNumber) {
 
     let card = {balance: 100, transactionLimit: 100, historyLogs: [], key: someNumber};
@@ -118,3 +121,55 @@ console.log(transferCredits);
 console.log(userCard2.getCardOptions());
 
 console.log(userCard1.getCardOptions());
+
+
+// -------------------------------------------------------------------------------------------------------
+
+
+// 2) Друге завдання,котре описується за посиланням "https://github.com/GrayHead/js_demos/blob/master/js/archive/additioanl_tasks/additional7/%D1%81losures.pdf"
+
+class UserAccount {
+    constructor(name, cards) {
+        this.name = name;
+        this.cards = cards;
+    }
+
+    addCard(someFunction) {
+
+        if ((this.cards.length <= 3)) {
+
+            this.cards.push(someFunction);
+
+        } else if (this.cards.length>3) {
+
+            console.log("Your array length is too long");
+
+        }
+    }
+
+    getCardByKey(someNumber) {
+
+        for (let i = 0; i < this.cards.length; i++) {
+
+            if (someNumber <= 3 && someNumber===this.cards[i].getCardOptions().key) {
+
+                return this.cards[i].getCardOptions();
+
+            }
+        }
+    }
+}
+
+let cardArray = [];
+
+const user = new UserAccount('Tom',cardArray);
+
+user.addCard(userCard(1));
+user.addCard(userCard(2));
+user.addCard(userCard(3));
+
+console.log(user);
+
+const cardByKey = user.getCardByKey(3);
+
+console.log(cardByKey);

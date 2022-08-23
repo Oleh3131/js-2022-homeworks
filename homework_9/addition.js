@@ -185,6 +185,9 @@
 const mainDiv = document.createElement('div');
 mainDiv.classList.add('mainBlock');
 
+const secondDiv = document.createElement('div');
+secondDiv.classList.add('carousel');
+
 const listElement = document.createElement('ul');
 
 const liElementOne = document.createElement('li');
@@ -239,13 +242,27 @@ liElementEight.appendChild(imgEight);
 liElementNine.appendChild(imgNine);
 liElementTen.appendChild(imgTen);
 
+const firstButton = document.createElement('button');
+firstButton.classList.add('transition', 'prev');
+
+const secondButton = document.createElement('button');
+secondButton.classList.add('transition', 'next');
+
 listElement.append(liElementOne,liElementTwo,liElementThree,liElementFour,liElementFive,liElementSix,liElementSeven,liElementEight,liElementNine,liElementTen);
 
-mainDiv.appendChild(listElement);
+secondDiv.appendChild(listElement);
+
+mainDiv.append(firstButton,secondDiv,secondButton);
 
 document.body.appendChild(mainDiv);
 
+const nodeListOf = mainDiv.querySelectorAll("li");
 
+for (let i = 1; i < nodeListOf; i++) {
+
+    nodeListOf[i].style.position = 'relative';
+
+}
 
 
 

@@ -6,9 +6,90 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>first addition</title>
+    <style>
 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu {
+            margin-left: 100px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            cursor: pointer;
+            transition: 1500ms;
+        }
+
+        .title:hover {
+            color: red;
+            transition: 800ms;
+        }
+
+        .menu li {
+            line-height: 20px;
+            margin-left: 18px;
+        }
+
+        .menu.hidden ul {
+            display: none;
+        }
+
+        .comment {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            margin: 40px;
+            background: yellow;
+            width: 300px;
+            min-width: 300px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .comment p {
+            text-align: center;
+        }
+
+        .comment:nth-child(2n) {
+            background: blue;
+        }
+
+        .comment.hidden h3 {
+            display: none;
+        }
+
+        .comment.hidden p {
+            display: none;
+        }
+        .button{
+            width: 75px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .mainBlock ul{
+
+            list-style: none;
+
+        }
+
+
+    </style>
 </head>
 <body>
+
 <script src="addition.js"></script>
 </body>
 </html>

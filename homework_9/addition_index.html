@@ -13,12 +13,14 @@
             padding: 0;
         }
 
-        body{
+        body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
+
         .menu {
             margin-left: 100px;
             margin-top: 50px;
@@ -73,23 +75,81 @@
         .comment.hidden p {
             display: none;
         }
-        .button{
+
+        .button {
             width: 75px;
             height: 30px;
             cursor: pointer;
         }
 
-        .mainBlock ul{
-
-            list-style: none;
+        .mainBlock {
+            position: relative;
+            width: 530px;
+            padding: 10px 40px;
+            border: 1px solid #CCC;
+            border-radius: 15px;
+            background: gold;
+            box-sizing: border-box;
 
         }
 
+        .mainBlock img {
+
+            width: 150px;
+            height: 150px;
+            display: block;
+
+        }
+
+        .transition {
+
+            width: 30px;
+            height: 30px;
+            border: 2px solid blue;
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            top: 70px;
+
+        }
+        .transition:hover {
+            background: #419aff;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 7px;
+        }
+
+        .next {
+            right: 7px;
+        }
+
+        .carousel {
+            width: 450px;
+            overflow: hidden;
+        }
+
+        .carousel ul {
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            height: 150px;
+            width: 9999px;
+            margin: 0;
+            padding: 0;
+            transition: margin-left 300ms;
+            font-size: 0;
+        }
+
+        .carousel li {
+            display: inline-block;
+        }
 
     </style>
+
 </head>
 <body>
-
 <script src="addition.js"></script>
 </body>
 </html>

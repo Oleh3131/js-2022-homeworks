@@ -22,13 +22,6 @@ function wakeUp(status, time) {
                 goToCleanTeeth = true;
                 resolve(goToCleanTeeth);
 
-            } else if (status && (time > 6.30 && time <= 7.20)) {
-
-                console.log('Треба поспішити!!!');
-                goToCleanTeeth = false;
-                mood = true;
-                resolve(goToCleanTeeth);
-
             } else {
 
                 console.log('Я проспав роботу!!!');
@@ -39,7 +32,7 @@ function wakeUp(status, time) {
     });
 }
 
-function brushTeeth(goToCleanTeeth, mood) {
+function brushTeeth(goToCleanTeeth) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
 
@@ -48,13 +41,6 @@ function brushTeeth(goToCleanTeeth, mood) {
                 console.log('Я матиму чисті зуби');
                 breakfast = true;
                 timeToLeave = 7.20;
-                resolve(breakfast);
-
-            } else if (goToCleanTeeth === false && mood === true) {
-
-                console.log('Поспішу поїсти раз не втигаю почистити зуби');
-                breakfast = true;
-                timeToLeave = 7.30;
                 resolve(breakfast);
 
             } else {
@@ -72,11 +58,6 @@ function haveBreakfast(status, time) {
             if (status && time ===7.20) {
 
                 console.log('Смачний був сніданок');
-                resolve(time);
-
-            } else if (status && time > 7.20 && time <= 7.50) {
-
-                console.log('Я не встигаю на автобус');
                 resolve(time);
 
             } else {
@@ -97,12 +78,6 @@ function roadToWork(time) {
                 console.log('Їду на роботу автобусом');
                 moneyBalances = money-40;
                 resolve(atWork=true);
-
-            }else if (time > 7.20 && time <= 7.50) {
-
-                console.log('Визову таксі');
-                moneyBalances = money-150;
-                resolve(atWork = true);
 
             }else {
 
@@ -172,7 +147,7 @@ function goHome(money) {
 //     .then(value => {
 //         console.log("---Wake up---")
 //
-//         return brushTeeth(value, mood)
+//         return brushTeeth(value)
 //     })
 //     .then(status => {
 //
@@ -239,7 +214,7 @@ function goHome(money) {
 //         const statusOfWakeUp = await wakeUp(true, timeToWakeUp);
 //         console.log("---Wake up---")
 //
-//         const statusOfBrushTeeth = await brushTeeth(statusOfWakeUp, mood);
+//         const statusOfBrushTeeth = await brushTeeth(statusOfWakeUp);
 //         console.log("---Brush teeth---")
 //
 //         const timeOfHaveBreakfast = await haveBreakfast(statusOfBrushTeeth, timeToLeave);
@@ -258,9 +233,7 @@ function goHome(money) {
 //         console.log("---Home---")
 //
 //     } catch (e){
-//
 //         console.warn('Це погано', e);
-//
 //     }
 // }
 //

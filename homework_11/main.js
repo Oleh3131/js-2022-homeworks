@@ -8,7 +8,6 @@ let money = 200;
 let moneyBalances;
 let goToCleanTeeth;
 let breakfast;
-let mood;
 let timeToWakeUp = 6.30;
 let timeToLeave;
 let atWork;

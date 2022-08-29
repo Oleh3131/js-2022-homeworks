@@ -439,85 +439,85 @@
 // -- взять массив пользователей.....................................................................................................................................................................................................................
 
 
-let usersWithAddress = [
-    {
-        id: 1,
-        name: 'vasya',
-        age: 31,
-        status: false,
-        address: {city: 'Lviv', street: 'Shevchenko', number: 16}
-    },
-    {
-        id: 2,
-        name: 'petya',
-        age: 30,
-        status: true,
-        address: {city: 'Kyiv', street: 'Shevchenko', number: 1}
-    },
-    {
-        id: 3,
-        name: 'kolya',
-        age: 29,
-        status: true,
-        address: {city: 'Lviv', street: 'Shevchenko', number: 121}
-    },
-    {
-        id: 4,
-        name: 'olya',
-        age: 28,
-        status: false,
-        address: {city: 'Ternopil', street: 'Shevchenko', number: 90}
-    },
-    {
-        id: 5,
-        name: 'max',
-        age: 30,
-        status: true,
-        address: {city: 'Lviv', street: 'Shevchenko', number: 115}
-    },
-    {
-        id: 6,
-        name: 'anya',
-        age: 31,
-        status: false,
-        address: {city: 'Kyiv', street: 'Shevchenko', number: 2}
-    },
-    {
-        id: 7,
-        name: 'oleg',
-        age: 28,
-        status: false,
-        address: {city: 'Ternopil', street: 'Shevchenko', number: 22}
-    },
-    {
-        id: 8,
-        name: 'andrey',
-        age: 29,
-        status: true,
-        address: {city: 'Lviv', street: 'Shevchenko', number: 43}
-    },
-    {
-        id: 9,
-        name: 'masha',
-        age: 30,
-        status: true,
-        address: {city: 'Kyiv', street: 'Shevchenko', number: 12}
-    },
-    {
-        id: 10,
-        name: 'olya',
-        age: 31,
-        status: false,
-        address: {city: 'Lviv', street: 'Shevchenko', number: 16}
-    },
-    {
-        id: 11,
-        name: 'max',
-        age: 31,
-        status: true,
-        address: {city: 'Ternopil', street: 'Shevchenko', number: 121}
-    }
-];
+// let usersWithAddress = [
+//     {
+//         id: 1,
+//         name: 'vasya',
+//         age: 31,
+//         status: false,
+//         address: {city: 'Lviv', street: 'Shevchenko', number: 16}
+//     },
+//     {
+//         id: 2,
+//         name: 'petya',
+//         age: 30,
+//         status: true,
+//         address: {city: 'Kyiv', street: 'Shevchenko', number: 1}
+//     },
+//     {
+//         id: 3,
+//         name: 'kolya',
+//         age: 29,
+//         status: true,
+//         address: {city: 'Lviv', street: 'Shevchenko', number: 121}
+//     },
+//     {
+//         id: 4,
+//         name: 'olya',
+//         age: 28,
+//         status: false,
+//         address: {city: 'Ternopil', street: 'Shevchenko', number: 90}
+//     },
+//     {
+//         id: 5,
+//         name: 'max',
+//         age: 30,
+//         status: true,
+//         address: {city: 'Lviv', street: 'Shevchenko', number: 115}
+//     },
+//     {
+//         id: 6,
+//         name: 'anya',
+//         age: 31,
+//         status: false,
+//         address: {city: 'Kyiv', street: 'Shevchenko', number: 2}
+//     },
+//     {
+//         id: 7,
+//         name: 'oleg',
+//         age: 28,
+//         status: false,
+//         address: {city: 'Ternopil', street: 'Shevchenko', number: 22}
+//     },
+//     {
+//         id: 8,
+//         name: 'andrey',
+//         age: 29,
+//         status: true,
+//         address: {city: 'Lviv', street: 'Shevchenko', number: 43}
+//     },
+//     {
+//         id: 9,
+//         name: 'masha',
+//         age: 30,
+//         status: true,
+//         address: {city: 'Kyiv', street: 'Shevchenko', number: 12}
+//     },
+//     {
+//         id: 10,
+//         name: 'olya',
+//         age: 31,
+//         status: false,
+//         address: {city: 'Lviv', street: 'Shevchenko', number: 16}
+//     },
+//     {
+//         id: 11,
+//         name: 'max',
+//         age: 31,
+//         status: true,
+//         address: {city: 'Ternopil', street: 'Shevchenko', number: 121}
+//     }
+// ];
 
 
 // Создать три чекбокса. Каждый из них активирует фильтр для вышеуказаного массива.
@@ -527,7 +527,7 @@ let usersWithAddress = [
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
 
-//
+
 // const firstForm = document.createElement('form');
 // firstForm.setAttribute('id', 'formOne');
 //
@@ -626,11 +626,73 @@ let usersWithAddress = [
 // };
 
 
+// *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .
+// Функция создает в боди 2 кнопки (назад/вперед) при нажатии вперед, вы переходите к дочернему элементу,
+// при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
+// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента
+// и  выводит первого ребенка. и тд.Когда все дети заканчиваются, мы выходим из данного дочернего элемента и
+// переходим к следующему, лежащему с ним на одном уровне.
 
-// *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
-// при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
-// НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
-//     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
-//
-//
+let myDOMElement = document.getElementsByClassName('mainBlock')[0];
+
+function elementCheck(someDOMElement) {
+
+    const blockOfButtons = document.createElement('div');
+    blockOfButtons.classList.add('blockOfButtons');
+
+    const backButton = document.createElement('button');
+    backButton.classList.add('backButton');
+    backButton.innerText = `Back`;
+
+    const nextButton = document.createElement('button');
+    nextButton.classList.add('nextButton');
+    nextButton.innerText = `Next`;
+
+    let elements = someDOMElement.children;
+    // це наш масив дочірніх елементів
+
+    nextButton.onclick = function (e) {
+
+        if (elements.length !== 0) {
+
+            for (let element of elements) {
+
+                function checkTheElement(someElement) {
+
+                    console.log(someElement);
+
+                    if (someElement.children.length !== 0) {
+
+                        console.log(someElement.children[0]);
+
+                        for (let child of someElement.children) {
+
+                            checkTheElement(child)
+
+                        }
+
+
+                    }else {
+
+                        backButton.onclick = function (e) {
+
+                            checkTheElement(someElement);
+
+                        };
+
+                    }
+                }
+
+                checkTheElement(element);
+            }
+        }
+    }
+
+    blockOfButtons.append(backButton, nextButton);
+    document.body.appendChild(blockOfButtons);
+}
+
+elementCheck(myDOMElement);
+
+
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан

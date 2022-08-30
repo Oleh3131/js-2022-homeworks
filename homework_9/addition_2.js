@@ -253,37 +253,122 @@ let users = [{
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок
 // за допомоги document.createElement. Всі данні в одному блоці.....................................
 
-for (let user of users) {
-
-    const divElement = document.createElement('div');
-    const stringify = JSON.stringify(user.address);
-
-
-    divElement.innerText = `${stringify}`;
-
-    document.body.appendChild(divElement);
-}
-
-
+// for (let user of users) {
+//
+//     const stringify = JSON.stringify(user);
+//
+//     const divElement = document.createElement('div');
+//
+//     divElement.innerText = `${stringify}`;
+//
+//     document.body.appendChild(divElement);
+// }
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок
-// за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)
+// за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)............................
+
+// for (let user of users) {
+//
+//     const divElement = document.createElement('div');
+//
+//     const h2Element = document.createElement('h2');
+//     h2Element.innerText=`name: ${user.name}`
+//
+//     const h2ElementSecond = document.createElement('h2');
+//     h2ElementSecond.innerText=`age: ${user.age}`
+//
+//     const h3Element = document.createElement('h3');
+//     h3Element.innerText=`status: ${user.status}`
+//
+//     const h4Element = document.createElement('h4');
+//     h4Element.innerText=`city: ${user.address.city}`
+//
+//     const h4ElementSecond = document.createElement('h4');
+//     h4ElementSecond.innerText=`country: ${user.address.country}`
+//
+//     const h3ElementThird = document.createElement('h4');
+//     h3ElementThird.innerText=`street: ${user.address.street}`
+//
+//     const h3ElementFourth = document.createElement('h4');
+//     h3ElementFourth.innerHTML=`houseNumber: ${user.address.houseNumber}<hr>`
+//
+//     divElement.append(h2Element,h2ElementSecond,h3Element,h4Element, h4ElementSecond, h3ElementThird, h3ElementFourth);
+//     document.body.appendChild(divElement);
+// }
+
+
+
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок
 // за допомоги document.createElement, розділивши всі властивості по своїм блокам ,
-// блок з адресою зробити окремим блоком, з блоками для кожної властивості
+// блок з адресою зробити окремим блоком, з блоками для кожної властивості...................................................
 
-
-
-
-// - є сторінка rules.html. Контентом сторінки є заголовки та параграфи. Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
-//     створити скріпт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
-//     Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
+// for (let user of users) {
 //
-// -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
-//     При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
-//     Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
+//     const divElement = document.createElement('div');
 //
+//     const h2Element = document.createElement('h2');
+//     h2Element.innerText=`name: ${user.name}`
+//
+//     const h2ElementSecond = document.createElement('h2');
+//     h2ElementSecond.innerText=`age: ${user.age}`
+//
+//     const h3Element = document.createElement('h3');
+//     h3Element.innerText=`status: ${user.status}`
+//
+//     const addressDiv = document.createElement('div');
+//     addressDiv.classList.add('addressBlock');
+//
+//     const h4Element = document.createElement('h4');
+//     h4Element.innerText=`city: ${user.address.city}`
+//
+//     const h4ElementSecond = document.createElement('h4');
+//     h4ElementSecond.innerText=`country: ${user.address.country}`
+//
+//     const h3ElementThird = document.createElement('h4');
+//     h3ElementThird.innerText=`street: ${user.address.street}`
+//
+//     const h3ElementFourth = document.createElement('h4');
+//     h3ElementFourth.innerHTML=`houseNumber: ${user.address.houseNumber}<hr>`
+//
+//     addressDiv.append(h4Element, h4ElementSecond, h3ElementThird, h3ElementFourth);
+//     divElement.append(h2Element,h2ElementSecond,h3Element,addressDiv);
+//     document.body.appendChild(divElement);
+// }
+
+
+// - є сторінка rules.html. Контентом сторінки є заголовки та параграфи. ......................................................................................................
+// Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
+// створити скріпт, котрий зчитує всі заголовки, та робить в блоці з id=content
+// з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
+//Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
+
+
+// const h2Elements = document.getElementsByTagName('h2');
+//
+// for (let element of h2Elements) {
+//
+//     const ulElement = document.createElement('ul');
+//     ulElement.classList.add('ulList')
+//
+//     const liElement = document.createElement('li');
+//
+//     const paragraphInfo = element.innerText;
+//
+//     liElement.innerText = `${paragraphInfo}`;
+//
+//     ulElement.appendChild(liElement);
+//      document.body.appendChild(ulElement);
+// }
+
+
+
+
+// -Є масив котрий характеризує правила......................................................................................................
+// Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці
+//  При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
+//  Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
+
 // let rules = [
 //     {
 //         title: 'Первое правило Бойцовского клуба.',
@@ -319,3 +404,19 @@ for (let user of users) {
 //     },
 //
 // ];
+//
+//
+// for (let rule of rules) {
+//
+//     const ruleDiv = document.createElement('div');
+//     ruleDiv.classList.add('ruleBlock');
+//
+//     const headerElement = document.createElement('h4');
+//     headerElement.innerText = `title: ${rule.title}`;
+//
+//     const paragraphElement = document.createElement('p');
+//     paragraphElement.innerText = `body: ${rule.body}`;
+//
+//     ruleDiv.append(headerElement, paragraphElement);
+//     document.body.appendChild(ruleDiv);
+// }

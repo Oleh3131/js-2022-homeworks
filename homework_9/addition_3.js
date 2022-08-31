@@ -400,3 +400,30 @@
 // -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+//     зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
+// asd ->tab-> <asd></asd>
+
+
+// const mainDiv = document.createElement('div');
+// mainDiv.style.background = 'silver';
+// mainDiv.style.width = '200px';
+// mainDiv.style.height = '100px';
+//
+//
+// mainDiv.setAttribute('contenteditable', 'true');
+//
+// mainDiv.onkeydown = function (e) {
+//
+//     if (e.key === 'Tab') {
+//
+//         let textContent = mainDiv.innerText;
+//
+//         const htmlElement = document.createElement(`${textContent}`);
+//
+//         mainDiv.appendChild(htmlElement);
+//     }
+// };
+//
+//
+// document.body.appendChild(mainDiv);
+

@@ -1,13 +1,50 @@
 // - Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
-//     При лівому кліку миші вивести в консоль інформацію про блок або елемент на який відбувся клік.
-//     Інформація яку потрібно вивести: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
+//   При лівому кліку миші вивести в консоль інформацію про блок або елемент на який відбувся клік.
+//   Інформація яку потрібно вивести: Назва тегу, список класів, список ід, розміри в форматі висота*ширина.............................................................................................
+
+
+// function checkElement(someElement) {
 //
+//     someElement.onclick = function (e) {
+//
+//         let targetTagName = e.target.tagName;
+//         let targetClassList = e.target.classList;
+//         let targetAttributeId = e.target.getAttribute('id');
+//         let targetWidth = e.target.clientWidth;
+//         let targetHeight = e.target.clientHeight;
+//
+//         console.log(`Назва тегу: ${targetTagName} - список класів: ${targetClassList} - список ід: ${targetAttributeId} - ширина:${targetWidth}px висота:${targetHeight}px`);
+//     };
+//
+// }
+//
+// checkElement(document.body);
+
+
 // - Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
-//     При лівому кліку миші  зробить popup (спливаючий блок) в якому буде вся інформація про блок.
-//     Інформація яку потрібно вивести в popup: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
+//     При лівому кліку миші  зробить popup (спливаючий блок) в якому буде вся інформація про блок..........................................................................................................................................
+//     Інформація яку потрібно вивести в popup: Назва тегу, список класів, список ід, розміри в
+//     форматі висота*ширина
+
+// function checkElement(someElement) {
+//
+//     someElement.onclick = function (e) {
+//
+//         let targetTagName = e.target.tagName;
+//         let targetClassList = e.target.classList;
+//         let targetAttributeId = e.target.getAttribute('id');
+//         let targetWidth = e.target.clientWidth;
+//         let targetHeight = e.target.clientHeight;
+//
+//         alert(`Назва тегу: <${targetTagName}> - список класів: [${targetClassList}] - список ід: ${targetAttributeId} - ширина:${targetWidth}px висота:${targetHeight}px`);
+//     };
+//
+// }
+//
+// checkElement(document.body);
 
 
-// - Є масив :
+// - Є масив :......................................................................................................................................
 //
 //     let usersList = [
 //         {
@@ -242,14 +279,124 @@
 //         }
 //     ];
 //
-// Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
 //
+// // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість,
+// // та властивості внутрішніх об'єктів створити свої окремі блок.
 //
+// for (let user of usersList) {
 //
-// --------
-//     за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в (масив) характеристику headings,всі параграфи покласти в характеристику (масив) paragraphs
+//     let mainUserDiv = document.createElement('div');
+//     mainUserDiv.classList.add('mainUserBlock');
 //
-// ------
+//     let mainH1 = document.createElement('h1');
+//     mainH1.innerText = `id: ${user.id}`;
 //
-//     зробити div contenteditable ввести будь яке ціле слово. та при натисканні табуляції перетворити його на подвійний тег
-// asd ->tab-> <asd></asd>
+//     let mainH2 = document.createElement('h2');
+//     mainH2.innerText = `name: ${user.name}`;
+//
+//     let mainH2Second = document.createElement('h2');
+//     mainH2Second.innerText = `username: ${user.username}`;
+//
+//     let firstH4 = document.createElement('h4');
+//     firstH4.innerText = `email: ${user.email}`;
+//
+//     let secondH4 = document.createElement('h4');
+//     secondH4.innerText = `User address:`;
+//
+//     let mainUl = document.createElement('ul');
+//
+//     let mainLiFirst = document.createElement('li');
+//     mainLiFirst.innerText = `street: ${user.address.street}`;
+//
+//     let mainLiSecond = document.createElement('li');
+//     mainLiSecond.innerText = `suite: ${user.address.suite}`;
+//
+//     let mainLiThird = document.createElement('li');
+//     mainLiThird.innerText = `city: ${user.address.city}`;
+//
+//     let mainLiFourth = document.createElement('li');
+//     mainLiFourth.innerText = `zipcode: ${user.address.zipcode}`;
+//
+//     let thirdH4 = document.createElement('h4');
+//     thirdH4.innerText = `User geo:`;
+//
+//     let mainUlSecond = document.createElement('ul');
+//
+//     let secondLiFirst = document.createElement('li');
+//     secondLiFirst.innerText = `geo lat: ${user.address.geo.lat}`;
+//
+//     let secondLiSecond = document.createElement('li');
+//     secondLiSecond.innerText = `geo lng: ${user.address.geo.lng}`;
+//
+//     let fourthH4 = document.createElement('h4');
+//     fourthH4.innerText = `phone: ${user.phone}`;
+//
+//     let fifthH4 = document.createElement('h4');
+//     fifthH4.innerText = `website: ${user.website}`;
+//
+//     let sixthH4 = document.createElement('h4');
+//     sixthH4.innerText = `User company:`;
+//
+//     let mainUlThird = document.createElement('ul');
+//
+//     let thirdLiFirst = document.createElement('li');
+//     thirdLiFirst.innerText = `name: ${user.company.name}`;
+//
+//     let thirdLiSecond = document.createElement('li');
+//     thirdLiSecond.innerText = `catchPhrase: ${user.company.catchPhrase}`;
+//
+//     let thirdLiThird = document.createElement('li');
+//     thirdLiThird.innerText = `bs: ${user.company.bs}`;
+//
+//     mainUlSecond.append(secondLiFirst,secondLiSecond)
+//     mainUl.append(mainLiFirst,mainLiSecond,mainLiThird,mainLiFourth,mainUlSecond)
+//     mainUlThird.append(thirdLiFirst,thirdLiSecond,thirdLiThird)
+//     mainUserDiv.append(mainH1, mainH2, mainH2Second, firstH4, secondH4, mainUl, fourthH4, fifthH4, sixthH4, mainUlThird);
+//     document.body.appendChild(mainUserDiv);
+//
+// }
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------------
+// за допомоги рекурсії перебрати структуру сторінки. зробити об'єкт, всі заголовки покласти в
+// (масив) характеристику headings,всі параграфи покласти в характеристику (масив) paragraphs
+
+
+// let emptyObject = {headings: [], paragraphs: []};
+//
+// function checkingTheStructure(someElement) {
+//
+//     const elements = someElement.children;
+//
+//     if (elements.length !== 0) {
+//
+//         for (let element of elements) {
+//
+//             if (element.tagName === 'H2') {
+//
+//                 const textHeader = element.innerText;
+//
+//                 emptyObject.headings.push(textHeader);
+//
+//             } else if (element.tagName === 'P') {
+//
+//                 const textParagraph = element.innerText;
+//
+//                 emptyObject.paragraphs.push(textParagraph);
+//
+//             }
+//
+//             checkingTheStructure(element);
+//         }
+//     }
+//     return emptyObject;
+// }
+//
+// const result = checkingTheStructure(document.body);
+// console.log(result);
+
+
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
